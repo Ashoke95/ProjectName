@@ -24,8 +24,9 @@
                                         <th>Serial No</th>
                                         <th>Name</th>
                                         <th>Address</th>
+                                        <th>Photo</th>
                                         <th>Mobile No</th>
-                                         <!-- <th>Photo</th> -->
+                                         
                                          <th>State</th>
                                          <th>District</th>
                                         <th>Actions</th>
@@ -37,16 +38,14 @@
                                         <td>{{ $item->id}}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->address }}</td>
+                                        <td>  
+                                        <img src="{{ asset($item->photo) }}" width= '50' height='50' class="img img-responsive" />
+                                        </td>
                                         <td>{{ $item->mobile }}</td>
                                         <td>{{ $item->state }}</td>
                                         <td>{{ $item->district }}</td>
-                                        <!-- <td>
-                                            <img src="{{ asset($item->photo) }}" width= '50' height='50' class="img img-responsive" />
- 
- 
-                                        </td> -->
-                                        <td>
-                                        <!-- <a href="{{ url('/contact/show' . $item->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a> -->
+                                        
+                                       <td>
                                             <a href="{{ url( route('editstudent',$item['id']) ) }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update</button></a>
 
 

@@ -39,24 +39,13 @@ class ContactController extends Controller
             'phone_number' => 'required',
             'message' => 'required'
         ]);
-       //  $validatedData = $request->validate([
-       //     'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-   
-       //    ]);
-   
-       //    $name1 = $request->file('image')->getClientOriginalName();
-   
-       //    $path = $request->file('image')->store('public/images');
-   
+      
   
        $contact = new Contact1;
 
         $contact->name = $request->name;
         $contact->email = $request->email;
-       //  $contact->name1 = $name1;
-       //  $contact->path = $path;
- 
-          // $contact->image=$studentImg;
+      
            
 
         $contact->subject = $request->subject;
@@ -101,89 +90,20 @@ class ContactController extends Controller
         
         
 
-        // $input = $request->all();
-        // Contact::create($input);
-        // return redirect('contact')->with('flash_message', 'Contact Addedd!');  
+          
     }
 
 
-    // public function show( $id){
-        
-      
-    //   $contact = Contact::find($id);
-    //   return view('contacts.show')->with('contacts', $contact);
-    //  }
+    
 
      public function editstudent($id)
      {
          $contact = Contact::find($id);
          return view('contacts.editstudent')->with('editstudent', ['editstudent' => $contact]);
      }
-        //return redirect('contact')->with('flash_message', 'Contact Addedd!');  
-   
-   
-
-
-        // $validatedData = $request->validate([
-        //     'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-    
-        //    ]);
-    
-        //    $name = $request->file('image')->getClientOriginalName();
-    
-        //    $path = $request->file('image')->store('public/images');
-    
-    
-        //    $save = new Contact;
-    
-        //    $save->name = $name;
-        //    $save->address = $address;
-        //    $save->mobile = $mobile;
-        //    //$save->image = $image;
-        //    $save->state = $state;
-        //    $save->district = $district;
-        //    $save->save();
-          // return redirect('contact')->with('flash_message', 'Contact Addedd!');
-         //return redirect('contact')->with('status', 'Image Has been uploaded')->with('image',$imageName);
-    
-   
-        // $noticeFile = $request->file('file');
-        // $fileThumbEx = $noticeFile->getClientOriginalExtension();
-        // $fileNoticeNewname = 'T'.time().'.'.$fileThumbEx;
-
-        // $filePath = Storage::disk('Notice_folder')->put($fileNoticeNewname,'Contents');
-        // $filePath = Storage::disk('Notice_folder')->url($filePath);
-
-        // $saveNoticeData = new Notice;
-
-        // $saveNoticeData->name  = $request->name;
-        // $saveNoticeData->address = $request->address;
-        // $saveNoticeData->mobile  = $mobile;
-        // $saveNoticeData->photo = $request->photo;
-
-        // $saveNoticeData->save();
-
-        //return redirect()->route('noticeboard'); 
-
-        // return redirect('Contact')->with('flash_message', 'Contact Addedd!'); 
-   
-   
-        // $uniqueFileName = uniqid() . $request->get('upload_file')->getClientOriginalName() . '.' . $request->get('upload_file')->getClientOriginalExtension();
-
-        // $request->get('upload_file')->move(public_path('files') . $uniqueFileName);
-     //dd($request);
-        //return redirect()->back()->with('success', 'File uploaded successfully.');
-  //  return redirect('Contact')->with('flash_message', 'Contact Addedd!'); 
-   
-    
- 
-    
-    // public function show($id)
-    // {
-    //     $contacts = Contact::find($id);
-    //     return view('contacts.show')->with('show',$contacts);
-    // }
- 
+        
+        
+     
     
    
     

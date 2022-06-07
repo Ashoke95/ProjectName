@@ -12,7 +12,7 @@
         <input type="text" name="address" id="address" class="form-control" required></br>
         <label>Mobile</label></br>
         <input type="text" name="mobile" id="mobile" class="form-control" required ></br>
-        <!-- <label class="form-label" for="inputImage">Image:</label>
+        <label class="form-label" for="inputImage">Image:</label>
                 <input
                     type="file"
                     name="image"
@@ -22,7 +22,7 @@
                 @error('image')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
-                <br><br> -->
+                <br><br>
                 <label> Select State</label>
                 <select class="form-control" name="state" required>
                 <option value="#">select</option>
